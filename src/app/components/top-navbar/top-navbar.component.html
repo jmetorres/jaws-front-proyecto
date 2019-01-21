@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Curso JAWS</span>
+        <span class="example-spacer"></span>
+        <mat-icon *ngIf="_securityService.isAuth()" class="example-icon" matTooltip="Cerrar sesión" (click)="_securityService.logout()">logout</mat-icon>
+        <span *ngIf="!_securityService.isAuth()"><a href="https://jmet-auth.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=2ie8pmcfnn3l72t4vouilp10rq&redirect_uri=https://d2mdobwp5rv1ko.cloudfront.net/security">Login</a></span>
+        <!-- <span *ngIf="!_securityService.isAuth()"><a href="https://jmet-auth.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=2ie8pmcfnn3l72t4vouilp10rq&redirect_uri=http://localhost:4200/security">Login</a></span> -->
+    </mat-toolbar-row>
+</mat-toolbar>
